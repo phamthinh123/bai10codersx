@@ -1,0 +1,21 @@
+.Header{
+	border-top: 1px solid rgba(0, 0, 0, 0.2);
+ border-collapse: collapse;
+
+}
+.Main{
+	border-collapse: collapse;
+	color: #212529;
+	background: #F2F2F2;
+}
+th,td,tr{
+  padding: 1rem;
+  width: 212px;
+  height: 48.8px;
+  
+  border-collapse: collapse;
+  text-align: left;
+}
+.is-even{
+background-color: white;
+}

@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+
 import './App.css';
 
-function App() {
+import Table from './components/Table'
+
+class App extends Component {
+  constructor(){
+    super();
+    this.contents=[
+{stt:1,First:"Mark",Last:"Otto",Handle:"@mdo"},
+{stt:2,First:"Jacob",Last:"Thornton",Handle:"@fat"},
+{stt:3,First:"Mark",Last:"Otto",Handle:"@mdo"}
+    ]
+  }
+  render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <table className="Header">
+      <tr>
+      <th>#</th>
+      <th>First</th>
+      <th>Last</th>
+      <th>Handle</th>
+
+      </tr>
+     </table>   
+      {
+        this.contents.map((content) =>
+        <Table content={content}/>
+        )
+      }
+      
+    
     </div>
   );
+}
 }
 
 export default App;
